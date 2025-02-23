@@ -1,17 +1,18 @@
 'use client'
 
+import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { products } from '../data/products'
+import { Laptop, Monitor, Mouse } from 'lucide-react'
+import { useCart } from '../context/CartContext'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useSearchParams } from 'next/navigation'
-import { products } from '../data/products'
-import { useCart } from '../context/CartContext'
-import { Laptop, Monitor, Mouse } from 'lucide-react'
 
-export default function ProductsPage() {
+function ProductsPage() {
   const { addToCart } = useCart()
   const searchParams = useSearchParams()
-  const category = searchParams.get('category')
-
+  const category = searchParams?.get('category')
+  
   const filteredProducts = category
     ? products.filter(product => product.category === category)
     : products
@@ -66,3 +67,5 @@ export default function ProductsPage() {
     </div>
   )
 }
+
+export default ProductsPage
