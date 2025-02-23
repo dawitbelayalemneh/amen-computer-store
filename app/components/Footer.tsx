@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200 text-center">
-          <p className="text-gray-600">© 2024 Amen Computer. All rights reserved.</p>
+          <p className="text-gray-600">© 2025 Amen Computer. All rights reserved.</p>
         </div>
       </div>
     </footer>
