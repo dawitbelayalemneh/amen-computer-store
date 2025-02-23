@@ -1,7 +1,6 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
 import { products } from '../data/products'
 import { Laptop, Monitor, Mouse } from 'lucide-react'
 import { useCart } from '../context/CartContext'
